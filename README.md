@@ -36,7 +36,7 @@ Training uses bfloat16 activations with float32 weights and float32 loss computa
 
 ## results
 
-Trained on 2000 AFHQv2 cat images at 128x128 with horizontal flips on a TPU v5e-8 for approximately 46,000 steps, roughly 1488 kimg, across about three weeks of sessions.
+Trained on 2000 AFHQv2 cat images at 128x128 with horizontal flips on a TPU v5e-8 for approximately 46,000 steps, roughly 1488 kimg, across about three weeks of sessions. FID score of 31.22 computed on 2000 generated samples against the real dataset using clean-fid.
 
 The model learned distinct breed variations with visible fur textures, coherent eye structure with proper pupil coloring, and natural background diversity. The latent walk shows smooth transitions between completely different cat identities in W space with no frame artifacts or discontinuous jumps. The features move with the content, not the pixel grid. That is the whole point of StyleGAN3.
 
