@@ -1,0 +1,50 @@
+generator:
+  z_dim: 512
+  w_dim: 512
+  kernel_size: 3
+  freq_channels: 512
+  filter_size: 6           ## controls filter tap count
+  lrelu_upsampling: 2      
+  initial_resolution: 16   ## fourier features start at first layer's sampling rate
+
+  ## 11 layers 
+  layers:
+    - [512, 512]
+    - [512, 512]
+    - [512, 512]
+    - [512, 512]
+    - [512, 512]
+    - [512, 512]
+    - [512, 256]
+    - [256, 256]
+    - [256, 256]
+    - [256, 256]
+    - [256, 256]
+
+discriminator:
+  d_layers:
+    - [256, 512]    ## 128x128 -> 64x64
+    - [512, 512]    ## 64x64   -> 32x32
+    - [512, 512]    ## 32x32   -> 16x16
+    - [512, 512]    ## 16x16   -> 8x8
+    - [512, 512]    ## 8x8     -> 4x4
+
+training:
+  batch_size: 32
+  g_lr: 0.0025
+  d_lr: 0.002
+  r1_gamma: 0.5
+  r1_interval: 16
+  ema_decay: 0.999
+  total_kimg: 5000
+  seed: 42
+
+ada:
+  target: 0.6
+  interval: 4
+  kimg: 500
+
+logging:
+  log_interval: 10
+  sample_interval: 500
+  checkpoint_interval: 1800

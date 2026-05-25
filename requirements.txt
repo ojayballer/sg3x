@@ -1,0 +1,7 @@
+jax[tpu]
+flax
+optax
+numpy
+scipy
+pyyaml
+pillow
