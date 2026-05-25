@@ -10,7 +10,7 @@ A complete StyleGAN3-T implementation built from scratch in JAX, Flax NNX, and O
 
 *Slerp interpolation in W space between random latent vectors*
 
-Full writeup covering the signal processing theory, the JAX implementation, and everything that broke along the way: [sg3x: Implementing Alias-Free GANs from Scratch in JAX](blog link)
+Full writeup covering the signal processing theory, the JAX implementation, and everything that broke along the way: [sg3x: Implementing Alias-Free GANs from Scratch in JAX](https://ojayballer.github.io/omojire-blog/sg3x.html)
 
 ## what is this
 
